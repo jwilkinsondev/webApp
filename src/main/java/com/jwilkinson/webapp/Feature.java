@@ -3,7 +3,11 @@ package com.jwilkinson.webapp;
 import java.util.Date;
 
 public class Feature {
-    public Feature(int featureID, String title, String description, int clientID, int priority, Date targetDeliveryDate, ProductArea productArea) {
+
+    public Feature() {
+
+    }
+    public Feature(Long featureID, String title, String description, Long clientID, Long priority, Date targetDeliveryDate, ProductArea productArea) {
         this.featureID = featureID;
         this.title = title;
         this.description = description;
@@ -16,19 +20,19 @@ public class Feature {
     public enum ProductArea {
         POLICIES, BILLING, CLAIMS, REPORTS
     }
-    private int featureID;
+    private Long featureID;
     private String title;
     private String description;
-    private int clientID;
-    private int priority; //todo make sure that priority is adjusted as needed
+    private Long clientID;
+    private Long priority; //todo make sure that priority is adjusted as needed
     private Date targetDeliveryDate;
     private ProductArea productArea;
 
-    public int getFeatureID() {
+    public Long getFeatureID() {
         return featureID;
     }
 
-    public void setFeatureID(int featureID) {
+    public void setFeatureID(Long featureID) {
         this.featureID = featureID;
     }
 
@@ -48,19 +52,19 @@ public class Feature {
         this.description = description;
     }
 
-    public int getClientID() {
+    public Long getClientID() {
         return clientID;
     }
 
-    public void setClientID(int clientID) {
+    public void setClientID(Long clientID) {
         this.clientID = clientID;
     }
 
-    public int getPriority() {
+    public Long getPriority() {
         return priority;
     }
 
-    public void setPriority(int priority) {
+    public void setPriority(Long priority) {
         this.priority = priority;
     }
 
