@@ -1,7 +1,6 @@
 package com.jwilkinson.webapp.persistence;
 
 import org.apache.ibatis.annotations.*;
-import com.jwilkinson.webapp.persistence.FeatureDBModel;
 
 import java.util.List;
 
@@ -15,8 +14,8 @@ public interface FeatureMapper {
             @Result(property = "description", column = "description"),
             @Result(property = "clientID", column = "client_id"),
             @Result(property = "priority", column = "priority"),
-            @Result(property = "targetDeliveryDate", column = "targetDeliveryDate"),
-            @Result(property = "productArea", column = "productArea")
+            @Result(property = "targetDeliveryDate", column = "target_delivery_date"),
+            @Result(property = "productArea", column = "product_area")
     })
     FeatureDBModel getFeature(@Param("featureID") Long featureID );
 
@@ -27,8 +26,8 @@ public interface FeatureMapper {
             @Result(property = "description", column = "description"),
             @Result(property = "clientID", column = "client_id"),
             @Result(property = "priority", column = "priority"),
-            @Result(property = "targetDeliveryDate", column = "targetDeliveryDate"),
-            @Result(property = "productArea", column = "productArea")
+            @Result(property = "targetDeliveryDate", column = "target_delivery_date"),
+            @Result(property = "productArea", column = "product_area")
     })
     List<FeatureDBModel> getAllFeatures();
 
