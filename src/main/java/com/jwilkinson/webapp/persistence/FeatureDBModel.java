@@ -2,8 +2,6 @@ package com.jwilkinson.webapp.persistence;
 
 import com.jwilkinson.webapp.Feature;
 
-import java.util.Date;
-
 public class FeatureDBModel {
 
         private Long featureID;
@@ -11,7 +9,7 @@ public class FeatureDBModel {
         private String description;
         private Long clientID;
         private Long priority; //todo make sure that priority is adjusted as needed
-        private Date targetDeliveryDate;
+        private String targetDeliveryDate;
         private Feature.ProductArea productArea;
 
         public Long getFeatureID() {
@@ -54,11 +52,11 @@ public class FeatureDBModel {
             this.priority = priority;
         }
 
-        public Date getTargetDeliveryDate() {
+        public String getTargetDeliveryDate() {
             return targetDeliveryDate;
         }
 
-        public void setTargetDeliveryDate(Date targetDeliveryDate) {
+        public void setTargetDeliveryDate(String targetDeliveryDate) {
             this.targetDeliveryDate = targetDeliveryDate;
         }
 

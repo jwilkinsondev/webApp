@@ -31,10 +31,10 @@ public interface FeatureMapper {
     })
     List<FeatureDBModel> getAllFeatures();
 
-    @Insert("insert into features(feature_id, title, description, client_id, priority, targetDeliveryDate, productArea) values (#{featureID}, #{title}, #{description}, #{clientID}, #{priority}, #{targetDeliveryDate}, #{productArea})")
+    @Insert("insert into features(feature_id, title, description, client_id, priority, target_delivery_date, product_area) values (#{featureID}, #{title}, #{description}, #{clientID}, #{priority}, #{targetDeliveryDate}, #{productArea})")
     void addFeature(FeatureDBModel featureDBModel);
 
-    @Update("update features set feature_id = #{featureID}, title = #{title}, description = #{description}, client_id = #{clientID}, priority = #{priority}, targetDeliveryDate = #{targetDeliveryDate}, productArea = #{productArea} where feature_id = #{featureID}")
+    @Update("update features set title = #{title}, description = #{description}, client_id = #{clientID}, priority = #{priority}, target_delivery_date = #{targetDeliveryDate}, product_area = #{productArea} where feature_id = #{featureID}")
     int updateFeature(FeatureDBModel featureDBModel);
 
     @Delete("delete from features where feature_id = #{featureID}")

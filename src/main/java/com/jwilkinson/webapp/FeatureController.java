@@ -32,7 +32,7 @@ public class FeatureController {
         return new FeatureList(features);
     }
 
-    @GetMapping(value = "{featureID})", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(value = "{featureID}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Feature> getFeature(@PathVariable("featureID") Long featureID) {
         FeatureDBModel featureDBModel = featureMapper.getFeature(featureID);
         if (featureDBModel == null) {
@@ -75,7 +75,7 @@ public class FeatureController {
         return ResponseEntity.created(location).build();
     }
 
-    @PutMapping(path = "/{featureID}", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PutMapping(path = "{featureID}", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity putFeature(@PathVariable("featureID") Long featureID, @RequestBody Feature feature) {
         if (featureID != feature.getFeatureID()) {
             return ResponseEntity.badRequest().build();

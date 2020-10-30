@@ -1,13 +1,11 @@
 package com.jwilkinson.webapp;
 
-import java.util.Date;
-
 public class Feature {
 
     public Feature() {
 
     }
-    public Feature(Long featureID, String title, String description, Long clientID, Long priority, Date targetDeliveryDate, ProductArea productArea) {
+    public Feature(Long featureID, String title, String description, Long clientID, Long priority, String targetDeliveryDate, ProductArea productArea) {
         this.featureID = featureID;
         this.title = title;
         this.description = description;
@@ -25,7 +23,7 @@ public class Feature {
     private String description;
     private Long clientID;
     private Long priority; //todo make sure that priority is adjusted as needed
-    private Date targetDeliveryDate;
+    private String targetDeliveryDate;
     private ProductArea productArea;
 
     public Long getFeatureID() {
@@ -68,11 +66,11 @@ public class Feature {
         this.priority = priority;
     }
 
-    public Date getTargetDeliveryDate() {
+    public String getTargetDeliveryDate() {
         return targetDeliveryDate;
     }
 
-    public void setTargetDeliveryDate(Date targetDeliveryDate) {
+    public void setTargetDeliveryDate(String targetDeliveryDate) {
         this.targetDeliveryDate = targetDeliveryDate;
     }
 
