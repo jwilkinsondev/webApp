@@ -1,4 +1,15 @@
+# webApp
 
+**Version 1.0.0**
+
+## Contributors
+- John Wilkinson <jwilkinsondev@gmail.com>
+
+## Future work
+I didn't have time to hook up my unit tests and build the frontend for the app.
+My understanding is that the point of the project is to determine what I can do in a few hours, so I'm going to call this a good stopping spot.
+For the front end I planned to stand up a react app using https://create-react-app.dev/.
+I would then hook it up to the backend api. The end goal would be for that to be bundled with the docker compose file as well so that you can start the whole app with one command.
 
 ## Initial setup
 You'll need to start up the project with `docker-compose up --build`
